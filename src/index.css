@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Rubik;
+}
+.searchBar {
+  @apply flex flex-row gap-2 px-4 py-2 items-center w-80 rounded-md bg-gray-900 outline-0;
+}
+input[type="text"]#searchInput {
+  @apply bg-transparent w-full text-xs font-medium text-gray-300;
+}
+
+input[type="text"]#searchInput:focus {
+  @apply border-0 outline-0 bg-white text-gray-800 font-medium;
+}
+.searchBar:focus-within {
+  @apply bg-white;
+}
+.header.headerWrapper {
+  @apply flex justify-between items-center px-8 py-2 bg-gray-950;
+}
+
+.header.rightContent {
+  @apply flex flex-row gap-4;
+}
+.icon.searchIcon {
+  @apply text-white;
+}
+
+.searchBar:focus-within .searchIcon {
+  @apply text-gray-600;
+}
+.avatar.avatarImg {
+  @apply w-[24px] h-[24px];
+}
+.profile.profileWrapper {
+  @apply cursor-pointer rounded-full outline outline-gray-100;
+}
+.logo.logoTitle {
+  @apply text-sm text-white font-semibold;
+}
+.logo.logoWrapper {
+  @apply flex flex-row gap-2 items-center;
+}
+
+.heroSection.header {
+  @apply h-[200px] w-full flex items-center justify-center bg-gray-950;
+}
+
+.heroSection.heroTitle {
+  @apply text-white text-center text-4xl font-bold;
+}
+.lineGraph.lineGraphWrapper {
+  @apply flex flex-row justify-between w-[300px] items-center;
+}
+.lineGraph.lineGraphRightContent {
+  @apply flex flex-col gap-2;
+}
+.lineGraphPercentWrapper {
+  @apply flex flex-row gap-1 items-center;
+}
+
+.market.marketTitle {
+  @apply text-base font-medium;
+}
+.market.indicesGroup {
+  @apply flex flex-row flex-wrap justify-between w-full gap-1;
+}
+.lineGraph .graph {
+  @apply w-[80px] h-[80px];
+}
+.market.marketSection {
+  @apply px-8 py-4 rounded-[26px] shadow-md;
+}
+.lineGraph.lineGraphPercent {
+  @apply text-sm font-light;
+}
+.lineGraph.lineGraphPrice {
+  @apply text-sm font-light;
+}
+.lineGraph.lineGraphTitle {
+  @apply text-sm font-normal w-[100px];
+}
+.upIcon {
+  @apply text-green-600;
+}
+.upIcon + .lineGraphPercent {
+  @apply text-green-600;
+}
+.downIcon {
+  @apply text-red-600;
+}
+.downIcon + .lineGraphPercent {
+  @apply text-red-600;
+}
+
+.marketSection.index {
+  @apply border-b border-gray-300 border-dashed px-1 py-1;
+}
+.marketSection.index.lastElement {
+  @apply border-b-0;
+}
+.emptyPortfolioWrapper {
+  @apply flex justify-center items-center;
+}
+.emptyPortfolioWrapper .imageWrapper {
+}
+
+.page {
+  @apply flex flex-col gap-4 justify-center items-center;
+}
+.IndexPage .subHeader {
+  @apply mx-16 flex flex-col gap-8;
+}
+
+.navItems {
+  @apply flex flex-row gap-2 items-center px-4 py-2 rounded-full border border-gray-200 text-sm font-medium;
+}
+.nav.navWrapper {
+  @apply flex flex-row gap-4;
+}
+
+.positiveBg {
+  @apply text-green-600;
+}
+.negativeBg {
+  @apply text-red-600;
+}
+.trendBg {
+  @apply text-amber-600;
+}
+.todayStocksTitle {
+  @apply mb-4;
+}
+
+.placeholder {
+  @apply inline-block flex justify-center items-center rounded-md;
+}
+.placeholder.md {
+  @apply w-[48px] h-[48px];
+}
+.stockList {
+  @apply grid grid-cols-5 gap-4 mt-8;
+}
+
+.stockListName {
+  @apply col-span-3;
+}
+.stockListBody {
+  @apply flex flex-row items-center gap-4;
+}
+.stockListBody.stockListChange {
+  @apply gap-1;
+}
+.todayStocksWrapper {
+  @apply border rounded-[24px] px-8 py-4 shadow-md;
+}
+.stockListHeader {
+  @apply text-sm font-light text-gray-500;
+}
+.stockListBody {
+  @apply font-normal text-base;
+}
+.stockListBody.stockListPrice,
+.stockListBody.stockListChange {
+  @apply font-light text-sm;
+}
+.navItems.selected {
+  @apply bg-gray-800 text-white;
+}
+.easeAnimation {
+  @apply transition-all duration-300 ease-in-out;
+}
+.truncate {
+  @apply text-ellipsis overflow-hidden;
+}
+.companyDetailsWrapper {
+  @apply w-[75%];
+}
+.companyDetailsWrapper .companySymbol {
+  @apply text-sm font-normal text-gray-600;
+}
+.companyDetailsWrapper .companyName {
+  @apply text-sm font-light text-gray-400;
+}
+.stocksAndMFIndexSection {
+  @apply grid grid-cols-5 gap-8;
+}
+.stocksAndMFIndexSection .stockAndMFList {
+  @apply col-span-3 flex flex-col gap-8;
+}
